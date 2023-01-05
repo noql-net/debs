@@ -1,11 +1,12 @@
-{ pkgs, targetPkgs }:
+{ lib, pkgs, targetPkgs }:
 
 let
-  lib = pkgs.lib;
+  targetBuildPackages = targetPkgs.buildPackages;
+  targetStaticStdenv = targetPkgs.pkgsStatic.stdenv;
 
   buildGoModuleTarget = pkgs.buildGoModule.override {
-    go = targetPkgs.buildPackages.go;
-    stdenv = targetPkgs.stdenv;
+    go = targetBuildPackages.go;
+    stdenv = targetStaticStdenv;
   };
 
   staticGoPackages = lib.attrsets.genAttrs [
@@ -25,13 +26,30 @@ let
     buildGoModule = buildGoModuleTarget;
   });
 
+  buildRustPackageTarget = pkgs.rustPlatform.buildRustPackage.override {
+    stdenv = targetStaticStdenv;
+    rustc = targetBuildPackages.rustc;
+    cargoBuildHook = targetPkgs.rustPlatform.cargoBuildHook;
+    cargoInstallHook = targetPkgs.rustPlatform.cargoInstallHook;
+  };
+
+  staticRustPackages = {
+    shadowsocks-rust = with pkgs; (import ./shadowsocks-rust.nix) {
+      inherit lib fetchFromGitHub pkg-config;
+      stdenv = targetStaticStdenv;
+      openssl = targetPkgs.pkgsStatic.openssl;
+      rust = targetBuildPackages.rust;
+      buildRustPackage = buildRustPackageTarget;
+    };
+  };
+
   debPackages = lib.attrsets.mapAttrs' (pkgName: inputPackage:
     lib.attrsets.nameValuePair (pkgName + "-deb") (
       with pkgs; (import ../toolbox/deb.nix) { inherit inputPackage stdenv dpkg; }
     )
-  ) staticGoPackages;
+  ) (staticGoPackages // staticRustPackages);
 
   all-deb = { all-deb = with pkgs; (import ../toolbox/all-deb.nix) { inherit lib stdenv; debs = debPackages; }; };
 in
 
-staticGoPackages // debPackages // all-deb
+staticGoPackages // staticRustPackages // debPackages // all-deb
