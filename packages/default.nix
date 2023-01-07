@@ -17,6 +17,7 @@ let
     "gost"
     "hysteria"
     "mieru"
+    "obfs4proxy"
     "ooniprobe-cli"
     "shadowsocks-v2ray-plugin"
     "shadowsocks-xray-plugin"
