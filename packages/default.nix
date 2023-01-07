@@ -19,6 +19,7 @@ let
     "ooniprobe-cli"
     "shadowsocks-v2ray-plugin"
     "shadowsocks-xray-plugin"
+    "trojan-go"
     "tun2socks"
     "v2ray-core"
     "xray-core"

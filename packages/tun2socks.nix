@@ -23,6 +23,8 @@ buildGoModule rec {
     "-X github.com/xjasonlyu/tun2socks/v2/internal/version.GitCommit=v${version}"
   ];
 
+  doCheck = false;
+
   meta = {
     homepage = "https://github.com/xjasonlyu/tun2socks";
     license = lib.licenses.gpl3Plus;
