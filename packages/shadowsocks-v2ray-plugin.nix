@@ -2,7 +2,7 @@
 
 buildGoModule rec {
   pname = "shadowsocks-v2ray-plugin";
-  version = "5.1.0";
+  version = "5.2.0";
 
   src = fetchFromGitHub {
     owner = "teddysun";
