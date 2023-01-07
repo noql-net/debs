@@ -16,7 +16,9 @@ buildGoModule rec {
   vendorSha256 = "sha256-XWzbEtYd8h63QdpAQZTGxyxMAAnpKO9Fp4y8/eeZ7Xw=";
 
   ldflags = [
-    "-s" "-w" "-buildid="
+    "-s"
+    "-w"
+    "-buildid="
     "-X github.com/xjasonlyu/tun2socks/v2/internal/version.Version=v${version}"
     "-X github.com/xjasonlyu/tun2socks/v2/internal/version.GitCommit=v${version}"
   ];

@@ -28,7 +28,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/apernet/hysteria/";
+    homepage = "https://github.com/apernet/hysteria";
     license = lib.licenses.mit;
   };
 }

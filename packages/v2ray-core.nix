@@ -25,7 +25,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/v2fly/v2ray-core/";
+    homepage = "https://github.com/v2fly/v2ray-core";
     license = lib.licenses.mit;
   };
 }

@@ -20,7 +20,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/shadowsocks/go-shadowsocks2/";
+    homepage = "https://github.com/shadowsocks/go-shadowsocks2";
     license = lib.licenses.asl20;
   };
 }

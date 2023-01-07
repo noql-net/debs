@@ -20,7 +20,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/teddysun/xray-plugin/";
+    homepage = "https://github.com/teddysun/xray-plugin";
     license = lib.licenses.mit;
   };
 }

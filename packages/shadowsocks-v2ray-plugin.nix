@@ -20,7 +20,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/teddysun/v2ray-plugin/";
+    homepage = "https://github.com/teddysun/v2ray-plugin";
     license = lib.licenses.mit;
   };
 }

@@ -22,10 +22,11 @@ let
     "tun2socks"
     "v2ray-core"
     "xray-core"
-  ] (name: with pkgs; (import ./${name}.nix) {
-    inherit lib fetchFromGitHub;
-    buildGoModule = buildGoModuleTarget;
-  });
+  ]
+    (name: with pkgs; (import ./${name}.nix) {
+      inherit lib fetchFromGitHub;
+      buildGoModule = buildGoModuleTarget;
+    });
 
   buildRustPackageTarget = pkgs.rustPlatform.buildRustPackage.override {
     stdenv = targetStaticStdenv;
@@ -44,11 +45,13 @@ let
     };
   };
 
-  debPackages = lib.attrsets.mapAttrs' (pkgName: inputPackage:
-    lib.attrsets.nameValuePair (pkgName + "-deb") (
-      with pkgs; (import ../toolbox/deb.nix) { inherit inputPackage stdenv dpkg; }
+  debPackages = lib.attrsets.mapAttrs'
+    (pkgName: inputPackage:
+      lib.attrsets.nameValuePair (pkgName + "-deb") (
+        with pkgs; (import ../toolbox/deb.nix) { inherit inputPackage stdenv dpkg; }
+      )
     )
-  ) (staticGoPackages // staticRustPackages);
+    (staticGoPackages // staticRustPackages);
 
   all-deb = { all-deb = with pkgs; (import ../toolbox/all-deb.nix) { inherit lib stdenv; debs = debPackages; }; };
 in

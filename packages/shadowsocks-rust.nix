@@ -30,7 +30,7 @@ buildRustPackage rec {
 
   doCheck = false;
 
-  rustTargetUpper = lib.toUpper (builtins.replaceStrings ["-"] ["_"] (rust.toRustTarget stdenv.hostPlatform));
+  rustTargetUpper = lib.toUpper (builtins.replaceStrings [ "-" ] [ "_" ] (rust.toRustTarget stdenv.hostPlatform));
   "CARGO_TARGET_${rustTargetUpper}_LINKER" = "${stdenv.cc.targetPrefix}cc";
 
   meta = {

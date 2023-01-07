@@ -20,7 +20,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://ooni.org/install/cli";
+    homepage = "https://github.com/ooni/probe-cli";
     license = lib.licenses.gpl3Plus;
   };
 }

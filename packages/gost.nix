@@ -21,7 +21,7 @@ buildGoModule rec {
   doCheck = false;
 
   meta = {
-    homepage = "https://github.com/go-gost/gost/";
+    homepage = "https://github.com/go-gost/gost";
     license = lib.licenses.mit;
   };
 }
