@@ -10,6 +10,7 @@ let
   };
 
   staticGoPackages = lib.attrsets.genAttrs [
+    "clash"
     "cloak"
     "dnscrypt-proxy2"
     "go-shadowsocks2"
