@@ -11,6 +11,7 @@ let
 
   staticGoPackages = lib.attrsets.genAttrs [
     "cloak"
+    "dnscrypt-proxy2"
     "go-shadowsocks2"
     "gost"
     "hysteria"
