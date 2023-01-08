@@ -11,6 +11,7 @@ let
 
   staticGoPackages = lib.attrsets.genAttrs [
     "age"
+    "chisel"
     "clash"
     "cloak"
     "dnscrypt-proxy2"
