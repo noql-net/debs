@@ -10,6 +10,7 @@ let
   };
 
   staticGoPackages = lib.attrsets.genAttrs [
+    "age"
     "clash"
     "cloak"
     "dnscrypt-proxy2"
