@@ -14,6 +14,7 @@ let
     "chisel"
     "clash"
     "cloak"
+    "dive"
     "dnscrypt-proxy2"
     "go-shadowsocks2"
     "gost"
