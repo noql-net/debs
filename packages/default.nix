@@ -19,6 +19,7 @@ let
     "gg"
     "go-shadowsocks2"
     "gost"
+    "headscale"
     "hysteria"
     "mieru"
     "obfs4proxy"
