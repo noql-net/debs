@@ -16,6 +16,7 @@ let
     "cloak"
     "dive"
     "dnscrypt-proxy2"
+    "gg"
     "go-shadowsocks2"
     "gost"
     "hysteria"
