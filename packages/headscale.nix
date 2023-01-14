@@ -15,11 +15,14 @@ buildGoModule rec {
 
   vendorSha256 = "sha256-SuKT+b8g6xEK15ry2IAmpS/vwDG+zJqK9nfsWpHNXuU=";
 
+  tags = [ "ts2019" ];
   ldflags = [
     "-s"
     "-w"
     "-buildid="
+    "-X github.com/juanfont/headscale/cmd/headscale/cli.Version=${version}"
   ];
+  subPackages = [ "cmd/headscale" ];
 
   doCheck = false;
 
