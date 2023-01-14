@@ -54,6 +54,10 @@ let
       inherit stdenv lib fetchFromGitHub pkg-config openssl rust;
       buildRustPackage = buildRustPackageTarget;
     };
+    gping = (import ./gping.nix) {
+      inherit stdenv lib fetchFromGitHub rust;
+      buildRustPackage = buildRustPackageTarget;
+    };
   };
 
   debPackages = lib.attrsets.mapAttrs'
