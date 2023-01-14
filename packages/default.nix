@@ -1,12 +1,22 @@
 { lib, pkgs, targetPkgs }:
 
 let
-  targetBuildPackages = targetPkgs.buildPackages;
-  targetStaticStdenv = targetPkgs.pkgsStatic.stdenv;
+  fetchFromGitHub = pkgs.fetchFromGitHub;
+  pkg-config = pkgs.pkg-config;
+  dpkg = pkgs.dpkg;
+
+  go = targetPkgs.buildPackages.go;
+  rust = targetPkgs.buildPackages.rust;
+  rustc = targetPkgs.buildPackages.rustc;
+
+  stdenv = targetPkgs.pkgsStatic.stdenv;
+  openssl = targetPkgs.pkgsStatic.openssl;
+
+  cargoBuildHook = targetPkgs.rustPlatform.cargoBuildHook;
+  cargoInstallHook = targetPkgs.rustPlatform.cargoInstallHook;
 
   buildGoModuleTarget = pkgs.buildGoModule.override {
-    go = targetBuildPackages.go;
-    stdenv = targetStaticStdenv;
+    inherit stdenv go;
   };
 
   staticGoPackages = lib.attrsets.genAttrs [
@@ -31,24 +41,17 @@ let
     "v2ray-core"
     "xray-core"
   ]
-    (name: with pkgs; (import ./${name}.nix) {
-      inherit lib fetchFromGitHub;
-      buildGoModule = buildGoModuleTarget;
+    (name: (import ./${name}.nix) {
+      inherit lib fetchFromGitHub; buildGoModule = buildGoModuleTarget;
     });
 
   buildRustPackageTarget = pkgs.rustPlatform.buildRustPackage.override {
-    stdenv = targetStaticStdenv;
-    rustc = targetBuildPackages.rustc;
-    cargoBuildHook = targetPkgs.rustPlatform.cargoBuildHook;
-    cargoInstallHook = targetPkgs.rustPlatform.cargoInstallHook;
+    inherit stdenv rustc cargoBuildHook cargoInstallHook;
   };
 
   staticRustPackages = {
-    shadowsocks-rust = with pkgs; (import ./shadowsocks-rust.nix) {
-      inherit lib fetchFromGitHub pkg-config;
-      stdenv = targetStaticStdenv;
-      openssl = targetPkgs.pkgsStatic.openssl;
-      rust = targetBuildPackages.rust;
+    shadowsocks-rust = (import ./shadowsocks-rust.nix) {
+      inherit stdenv lib fetchFromGitHub pkg-config openssl rust;
       buildRustPackage = buildRustPackageTarget;
     };
   };
@@ -56,12 +59,12 @@ let
   debPackages = lib.attrsets.mapAttrs'
     (pkgName: inputPackage:
       lib.attrsets.nameValuePair (pkgName + "-deb") (
-        with pkgs; (import ../toolbox/deb.nix) { inherit inputPackage stdenv dpkg; }
+        (import ../toolbox/deb.nix) { inherit inputPackage stdenv dpkg; }
       )
     )
     (staticGoPackages // staticRustPackages);
 
-  all-deb = { all-deb = with pkgs; (import ../toolbox/all-deb.nix) { inherit lib stdenv; debs = debPackages; }; };
+  all-deb = { all-deb = (import ../toolbox/all-deb.nix) { inherit lib stdenv; debs = debPackages; }; };
 in
 
 staticGoPackages // staticRustPackages // debPackages // all-deb

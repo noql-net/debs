@@ -20,6 +20,7 @@ buildGoModule rec {
     "-w"
     "-buildid="
   ];
+  subPackages = [ "." ];
 
   doCheck = false;
 
