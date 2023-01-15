@@ -4,6 +4,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
 
   outputs = { self, nixpkgs }: {
+    devShells.x86_64-linux.default = ((import ./toolbox/shell.nix) { pkgs = nixpkgs.legacyPackages.x86_64-linux; });
     packages =
       let
         lib = nixpkgs.lib;
