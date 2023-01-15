@@ -23,27 +23,7 @@ All the packages that this flake builds are also available as outputs to the fla
 
 ## Packages
 ```
-age
-chisel
-clash
-cloak
-dive
-dnscrypt-proxy2
-gg
-go-shadowsocks2
-gost
-gping
-headscale
-hysteria
-mieru
-obfs4proxy
-ooniprobe-cli
-shadowsocks-rust
-shadowsocks-v2ray-plugin
-shadowsocks-xray-plugin
-sing-box
-trojan-go
-tun2socks
-v2ray-core
-xray-core
+{{- range (datasource "pkgs") }}
+{{ . }}
+{{- end }}
 ```
