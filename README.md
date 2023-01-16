@@ -37,6 +37,7 @@ gping
 headscale
 hysteria
 mieru
+mtg
 obfs4proxy
 ooniprobe-cli
 shadowsocks-rust
