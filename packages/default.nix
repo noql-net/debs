@@ -21,6 +21,7 @@ let
 
   staticGoPackages = lib.attrsets.genAttrs [
     "age"
+    "brook"
     "chisel"
     "clash"
     "cloak"

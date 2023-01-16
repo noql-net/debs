@@ -24,6 +24,7 @@ All the packages that this flake builds are also available as outputs to the fla
 ## Packages
 ```
 age
+brook
 chisel
 clash
 cloak
