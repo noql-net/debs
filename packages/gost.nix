@@ -2,18 +2,18 @@
 
 buildGoModule rec {
   pname = "gost";
-  version = "3.0.0-rc.2";
+  version = "3.0.0-rc.3";
 
   src = fetchFromGitHub {
     owner = "go-gost";
     repo = "gost";
     rev = "v${version}";
-    sha256 = "sha256-mEdmaWSqH6I7rK223FLaYvayBt2IXh1yfsQunfv3plM=";
+    sha256 = "sha256-pvTQE+ODMaJ3tm/pG+PzeMQtNUb5eEP5eDtG/uRBPQI=";
   };
 
   CGO_ENABLED = 0;
 
-  vendorSha256 = "sha256-csuAUEFRwz6KTCY6E4p6ePYQoPwGYu+tpLQgMUaY9Qo=";
+  vendorSha256 = "sha256-VSvvWLQZKRBoWEeB0xS92e/wm4zV//aaWdt3OZ3ZBHQ=";
 
   ldflags = [ "-s" "-w" "-buildid=" ];
   subPackages = [ "cmd/gost" ];
