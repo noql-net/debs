@@ -41,6 +41,7 @@ let
     "trojan-go"
     "tun2socks"
     "v2ray-core"
+    "wireproxy"
     "xray-core"
   ]
     (name: (import ./${name}.nix) {

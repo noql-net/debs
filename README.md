@@ -46,5 +46,6 @@ sing-box
 trojan-go
 tun2socks
 v2ray-core
+wireproxy
 xray-core
 ```
