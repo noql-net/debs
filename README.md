@@ -38,6 +38,7 @@ headscale
 hysteria
 mieru
 mtg
+mwgp
 obfs4proxy
 ooniprobe-cli
 shadowsocks-rust

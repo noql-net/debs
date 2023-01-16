@@ -34,6 +34,7 @@ let
     "hysteria"
     "mieru"
     "mtg"
+    "mwgp"
     "obfs4proxy"
     "ooniprobe-cli"
     "shadowsocks-v2ray-plugin"
