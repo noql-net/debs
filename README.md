@@ -42,6 +42,7 @@ mwgp
 obfs4proxy
 ooniprobe-cli
 prometheus-alertmanager
+prometheus-blackbox-exporter
 shadowsocks-rust
 shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin

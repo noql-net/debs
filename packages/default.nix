@@ -38,6 +38,7 @@ let
     "obfs4proxy"
     "ooniprobe-cli"
     "prometheus-alertmanager"
+    "prometheus-blackbox-exporter"
     "shadowsocks-v2ray-plugin"
     "shadowsocks-xray-plugin"
     "sing-box"
