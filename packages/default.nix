@@ -37,6 +37,7 @@ let
     "mwgp"
     "obfs4proxy"
     "ooniprobe-cli"
+    "prometheus-alertmanager"
     "shadowsocks-v2ray-plugin"
     "shadowsocks-xray-plugin"
     "sing-box"

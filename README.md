@@ -41,6 +41,7 @@ mtg
 mwgp
 obfs4proxy
 ooniprobe-cli
+prometheus-alertmanager
 shadowsocks-rust
 shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin
