@@ -2,16 +2,16 @@
 
 buildRustPackage rec {
   pname = "gping";
-  version = "1.7.0";
+  version = "1.8.0";
 
   src = fetchFromGitHub {
     owner = "orf";
     repo = "gping";
     rev = "gping-v${version}";
-    sha256 = "sha256-eC043Bjtmb/qlA8OWixeBbbbLVgALDkFqQWzN6dpG/A=";
+    sha256 = "sha256-+A+j729DKlvzBjJBVMvZgl5dcIGZcLdxyGT9lLX+7yU=";
   };
 
-  cargoSha256 = "sha256-lRSlfscBzKP2Kny7MA/aFrV5sAzQw1w1WZo3CzLCK88=";
+  cargoSha256 = "sha256-yBpc8kS/9krriK/RkODvEsAepecU7yhY8Io46Xq3Lk8=";
 
   doCheck = false;
 
