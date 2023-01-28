@@ -2,18 +2,18 @@
 
 buildGoModule rec {
   pname = "gg";
-  version = "0.2.15";
+  version = "0.2.16";
 
   src = fetchFromGitHub {
     owner = "mzz2017";
     repo = "gg";
     rev = "v${version}";
-    sha256 = "sha256-INoJcb6XUMvT1E56hC3BGK3Ax+v4jSRpZV12zpjYfMA=";
+    sha256 = "sha256-zdOcQ/+WXS7pDfnvYdb/FDjMT3yJdwnS8DoH2MIDcDs=";
   };
 
   CGO_ENABLED = 0;
 
-  vendorSha256 = "sha256-kKIekANzLY2TYFyII1/BkKkqPYgmHB9xEfAVhJyI8FI=";
+  vendorSha256 = "sha256-kx94B1XIXWJOY9Y69lNb/sHWVjsuFuOXrdtJFJrUuAs=";
 
   ldflags = [
     "-s"
@@ -21,6 +21,7 @@ buildGoModule rec {
     "-buildid="
     "-X github.com/mzz2017/gg/cmd.Version=${version}"
   ];
+  subPackages = [ "." ];
 
   doCheck = false;
 
