@@ -14,6 +14,7 @@ let
 
   cargoBuildHook = targetPkgs.rustPlatform.cargoBuildHook;
   cargoInstallHook = targetPkgs.rustPlatform.cargoInstallHook;
+  cargoSetupHook = targetPkgs.rustPlatform.cargoSetupHook;
 
   buildGoModuleTarget = pkgs.buildGoModule.override {
     inherit stdenv go;
@@ -53,7 +54,7 @@ let
     });
 
   buildRustPackageTarget = pkgs.rustPlatform.buildRustPackage.override {
-    inherit stdenv rustc cargoBuildHook cargoInstallHook;
+    inherit stdenv rustc cargoBuildHook cargoInstallHook cargoSetupHook;
   };
 
   staticRustPackages = {
