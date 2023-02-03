@@ -5,7 +5,8 @@ let
   pkg-config = pkgs.pkg-config;
   dpkg = pkgs.dpkg;
 
-  go = targetPkgs.buildPackages.go;
+  go = targetPkgs.buildPackages.go_1_20;
+  go_1_19 = targetPkgs.buildPackages.go;
   rust = targetPkgs.buildPackages.rust;
   rustc = targetPkgs.buildPackages.rustc;
 
@@ -20,6 +21,10 @@ let
     inherit stdenv go;
   };
 
+  buildGoModuleTarget119 = pkgs.buildGoModule.override {
+    inherit stdenv; go = go_1_19;
+  };
+
   staticGoPackages = lib.attrsets.genAttrs [
     "age"
     "brook"
@@ -30,28 +35,34 @@ let
     "dnscrypt-proxy2"
     "gg"
     "go-shadowsocks2"
-    "gost"
     "headscale"
-    "hysteria"
     "mieru"
     "mtg"
     "mwgp"
     "obfs4proxy"
-    "ooniprobe-cli"
     "prometheus-alertmanager"
     "prometheus-blackbox-exporter"
-    "shadowsocks-v2ray-plugin"
-    "shadowsocks-xray-plugin"
     "sing-box"
     "trojan-go"
+    "wireproxy"
+  ]
+    (name: (import ./${name}.nix) {
+      inherit lib fetchFromGitHub;
+      buildGoModule = buildGoModuleTarget;
+    }) // (lib.attrsets.genAttrs [
+    "gost"
+    "hysteria"
+    "ooniprobe-cli"
+    "shadowsocks-v2ray-plugin"
+    "shadowsocks-xray-plugin"
     "tun2socks"
     "v2ray-core"
-    "wireproxy"
     "xray-core"
   ]
     (name: (import ./${name}.nix) {
-      inherit lib fetchFromGitHub; buildGoModule = buildGoModuleTarget;
-    });
+      inherit lib fetchFromGitHub;
+      buildGoModule = buildGoModuleTarget119;
+    }));
 
   buildRustPackageTarget = pkgs.rustPlatform.buildRustPackage.override {
     inherit stdenv rustc cargoBuildHook cargoInstallHook cargoSetupHook;
