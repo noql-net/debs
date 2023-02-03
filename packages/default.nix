@@ -42,6 +42,7 @@ let
     "obfs4proxy"
     "prometheus-alertmanager"
     "prometheus-blackbox-exporter"
+    "shadowsocks-xray-plugin"
     "sing-box"
     "trojan-go"
     "wireproxy"
@@ -55,7 +56,6 @@ let
     "hysteria"
     "ooniprobe-cli"
     "shadowsocks-v2ray-plugin"
-    "shadowsocks-xray-plugin"
     "tun2socks"
     "v2ray-core"
   ]
