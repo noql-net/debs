@@ -45,6 +45,7 @@ let
     "sing-box"
     "trojan-go"
     "wireproxy"
+    "xray-core"
   ]
     (name: (import ./${name}.nix) {
       inherit lib fetchFromGitHub;
@@ -57,7 +58,6 @@ let
     "shadowsocks-xray-plugin"
     "tun2socks"
     "v2ray-core"
-    "xray-core"
   ]
     (name: (import ./${name}.nix) {
       inherit lib fetchFromGitHub;
