@@ -31,6 +31,7 @@ let
     "chisel"
     "clash"
     "cloak"
+    "daze"
     "dive"
     "dnscrypt-proxy2"
     "gg"
