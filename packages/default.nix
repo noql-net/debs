@@ -48,6 +48,7 @@ let
     "trojan-go"
     "wireproxy"
     "xray-core"
+    "outline-ss-server"
   ]
     (name: (import ./${name}.nix) {
       inherit lib fetchFromGitHub;

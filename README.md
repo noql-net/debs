@@ -42,6 +42,7 @@ mtg
 mwgp
 obfs4proxy
 ooniprobe-cli
+outline-ss-server
 prometheus-alertmanager
 prometheus-blackbox-exporter
 shadowsocks-rust
