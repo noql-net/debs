@@ -44,6 +44,7 @@ let
     "outline-ss-server"
     "prometheus-alertmanager"
     "prometheus-blackbox-exporter"
+    "shadowsocks-v2ray-plugin"
     "shadowsocks-xray-plugin"
     "sing-box"
     "trojan-go"
@@ -58,7 +59,6 @@ let
     "gost"
     "hysteria"
     "ooniprobe-cli"
-    "shadowsocks-v2ray-plugin"
     "tun2socks"
   ]
     (name: (import ./${name}.nix) {
