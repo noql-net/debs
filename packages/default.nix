@@ -41,14 +41,15 @@ let
     "mtg"
     "mwgp"
     "obfs4proxy"
+    "outline-ss-server"
     "prometheus-alertmanager"
     "prometheus-blackbox-exporter"
     "shadowsocks-xray-plugin"
     "sing-box"
     "trojan-go"
+    "v2ray-core"
     "wireproxy"
     "xray-core"
-    "outline-ss-server"
   ]
     (name: (import ./${name}.nix) {
       inherit lib fetchFromGitHub;
@@ -59,7 +60,6 @@ let
     "ooniprobe-cli"
     "shadowsocks-v2ray-plugin"
     "tun2socks"
-    "v2ray-core"
   ]
     (name: (import ./${name}.nix) {
       inherit lib fetchFromGitHub;
