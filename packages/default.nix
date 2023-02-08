@@ -37,6 +37,7 @@ let
     "gg"
     "go-shadowsocks2"
     "headscale"
+    "hysteria"
     "mieru"
     "mtg"
     "mwgp"
@@ -57,7 +58,6 @@ let
       buildGoModule = buildGoModuleTarget;
     }) // (lib.attrsets.genAttrs [
     "gost"
-    "hysteria"
     "ooniprobe-cli"
     "tun2socks"
   ]
