@@ -2,18 +2,18 @@
 
 buildGoModule rec {
   pname = "daze";
-  version = "1.18.2";
+  version = "1.18.3";
 
   src = fetchFromGitHub {
     owner = "mohanson";
     repo = "daze";
     rev = "v${version}";
-    sha256 = "sha256-QlQM2LhImFwldonVv/DCW7jhhnc4E6htd2+g2jcL8yo=";
+    sha256 = "sha256-tQA983aO6Xx9xdyUMwR8a6GEDyWYmolj05L9rCYyFO8=";
   };
 
   CGO_ENABLED = 0;
 
-  vendorSha256 = "sha256-QONhNOlDEF5GdVfucDTbwVtFpOLcQxmbxy7IusmUVx8=";
+  vendorSha256 = "sha256-0bVgdQLOukaTUhdOYA0uGXW0Ltw86417cIQiq+SjFV4=";
 
   ldflags = [ "-s" "-w" "-buildid=" ];
   subPackages = [ "cmd/daze" ];
