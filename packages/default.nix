@@ -36,6 +36,7 @@ let
     "dnscrypt-proxy2"
     "gg"
     "go-shadowsocks2"
+    "gost"
     "headscale"
     "hysteria"
     "mieru"
@@ -57,7 +58,6 @@ let
       inherit lib fetchFromGitHub;
       buildGoModule = buildGoModuleTarget;
     }) // (lib.attrsets.genAttrs [
-    "gost"
     "ooniprobe-cli"
     "tun2socks"
   ]
