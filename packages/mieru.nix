@@ -2,18 +2,18 @@
 
 buildGoModule rec {
   pname = "mieru";
-  version = "1.11.0";
+  version = "1.12.0";
 
   src = fetchFromGitHub {
     owner = "enfein";
     repo = "mieru";
     rev = "v${version}";
-    sha256 = "sha256-iIp6F1ediLuami6f3QlHdo0x7EIlB7TVyl651wJVLyY=";
+    sha256 = "sha256-e7OovkdNapIolM5g2E2ph1JLV7+NvXpZWNCdfoVM2Zk=";
   };
 
   CGO_ENABLED = 0;
 
-  vendorSha256 = "sha256-Pt5av6+QG6Z5Es0pMOiypgjp3c2KexlEfI90Kiop9kk=";
+  vendorSha256 = "sha256-vC1fhep8UIevIrf3EnRW1ouCTnVqxCPy2J6MSPryNuo=";
 
   ldflags = [ "-s" "-w" "-buildid=" ];
   subPackages = [ "cmd/mieru" "cmd/mita" ];
