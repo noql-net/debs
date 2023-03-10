@@ -52,6 +52,7 @@ ooniprobe-cli
 outline-ss-server
 prometheus-alertmanager
 prometheus-blackbox-exporter
+psiphon-tunnel-core
 shadowsocks-rust
 shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin
