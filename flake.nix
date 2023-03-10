@@ -2,34 +2,35 @@
   description = "debrepo";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
+  inputs.oven.url = "github:noql-net/oven/master";
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, oven }: rec {
     devShells.x86_64-linux.default = ((import ./toolbox/shell.nix) { pkgs = nixpkgs.legacyPackages.x86_64-linux; });
     packages =
       let
         lib = nixpkgs.lib;
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        builder = import ./packages;
+        builder = import ./packages.nix;
       in
       {
         x86_64-linux =
-          (builder { inherit lib pkgs; targetPkgs = pkgs.pkgsStatic; }) //
-          { default = self.packages.x86_64-linux.all-deb; };
+          (builder { inherit lib pkgs; oven = oven.packages.x86_64-linux; }) //
+          { default = packages.x86_64-linux.all-deb; };
 
         aarch64-linux =
-          (builder { inherit lib pkgs; targetPkgs = pkgs.pkgsCross.aarch64-multiplatform-musl; }) //
-          { default = self.packages.aarch64-linux.all-deb; };
+          (builder { inherit lib pkgs; oven = oven.packages.aarch64-linux; }) //
+          { default = packages.aarch64-linux.all-deb; };
 
         all = {
           all-deb = with pkgs;
             (import ./toolbox/all-deb.nix) {
               inherit lib stdenv;
-              debs = with self.packages; {
+              debs = with packages; {
                 x86_64-linux = x86_64-linux.all-deb;
                 aarch64-linux = aarch64-linux.all-deb;
               };
             };
-          default = self.packages.all.all-deb;
+          default = packages.all.all-deb;
         };
       };
   };
