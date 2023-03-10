@@ -9,6 +9,7 @@ let
     brook = oven.brook;
     chisel = oven.chisel;
     clash = oven.clash;
+    clash-meta = oven.clash-meta;
     cloak = oven.cloak;
     daze = oven.daze;
     dive = oven.dive;
