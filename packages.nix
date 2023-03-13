@@ -30,6 +30,7 @@ let
     prometheus-alertmanager = oven.prometheus-alertmanager;
     prometheus-blackbox-exporter = oven.prometheus-blackbox-exporter;
     psiphon-tunnel-core = oven.psiphon-tunnel-core;
+    shadow-tls = oven.shadow-tls;
     shadowsocks-rust = oven.shadowsocks-rust;
     shadowsocks-v2ray-plugin = oven.shadowsocks-v2ray-plugin;
     shadowsocks-xray-plugin = oven.shadowsocks-xray-plugin;

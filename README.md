@@ -54,6 +54,7 @@ outline-ss-server
 prometheus-alertmanager
 prometheus-blackbox-exporter
 psiphon-tunnel-core
+shadow-tls
 shadowsocks-rust
 shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin
