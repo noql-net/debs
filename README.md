@@ -39,6 +39,7 @@ daze
 dive
 dnscrypt-proxy2
 gg
+glider
 go-shadowsocks2
 gost
 gping
