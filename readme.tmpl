@@ -1,4 +1,4 @@
-# debrepo
+# debs
 
 A nix flake that is used to create an apt repository for debian-based
 distros containing a small selection of packages.
