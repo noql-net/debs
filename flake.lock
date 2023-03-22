@@ -115,11 +115,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1679331342,
-        "narHash": "sha256-uX+efvxPnVyDpPwIhamHqyvg+W+tyQW9aTWdFCWBxqA=",
+        "lastModified": 1679452098,
+        "narHash": "sha256-D686QbwCJKORNGJVO1VYJwSZjEJyn4ufMPtN2CTXeCk=",
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "77f2bc115ba4f379d289ba2e8e78beddbac46242",
+        "rev": "a3489d744b7adfd4249e669de473d2c2e47a3e64",
         "type": "github"
       },
       "original": {

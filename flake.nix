@@ -1,5 +1,5 @@
 {
-  description = "debrepo";
+  description = "debs";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
   inputs.oven.url = "github:noql-net/oven/master";
