@@ -108,11 +108,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1687502512,
-        "narHash": "sha256-dBL/01TayOSZYxtY4cMXuNCBk8UMLoqRZA+94xiFpJA=",
+        "lastModified": 1689373857,
+        "narHash": "sha256-mtBksyvhhT98Zsm9tYHuMKuLwUKDwv+BGTl6K5nOGhY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ae20aa58a6c0d1ca95c9b11f59a2d12eebc511f",
+        "rev": "dfdbcc428f365071f0ca3888f6ec8c25c3792885",
         "type": "github"
       },
       "original": {
@@ -144,11 +144,11 @@
         "oxalica-rust": "oxalica-rust"
       },
       "locked": {
-        "lastModified": 1688242658,
-        "narHash": "sha256-PasL99kWOx5HLob1WxNNgiyfD/BRSZai/gDP8GwU1+c=",
+        "lastModified": 1689998302,
+        "narHash": "sha256-nQMLx+cs1ipGPqWJ42Dw3bJYxPDy0BkLPKLup+A2eDQ=",
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "61051dc4e076b0b1e107edbb3dc9ab77453bc471",
+        "rev": "2d8fafdbc3ac4d41a25e5ba9b075ac1a94695756",
         "type": "github"
       },
       "original": {
