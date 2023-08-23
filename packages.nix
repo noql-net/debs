@@ -21,10 +21,10 @@ let
     gping = oven.gping;
     headscale = oven.headscale;
     hysteria = oven.hysteria;
+    lyrebird = oven.lyrebird;
     mieru = oven.mieru;
     mtg = oven.mtg;
     mwgp = oven.mwgp;
-    obfs4proxy = oven.obfs4proxy;
     ooniprobe-cli = oven.ooniprobe-cli;
     outline-ss-server = oven.outline-ss-server;
     prometheus-alertmanager = oven.prometheus-alertmanager;

@@ -45,10 +45,10 @@ gost
 gping
 headscale
 hysteria
+lyrebird
 mieru
 mtg
 mwgp
-obfs4proxy
 ooniprobe-cli
 outline-ss-server
 prometheus-alertmanager
