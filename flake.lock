@@ -8,16 +8,16 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1686108916,
-        "narHash": "sha256-looLH5MdY4erLiJw0XwQohGdr0fJL9y6TJY3898RA2U=",
+        "lastModified": 1691422976,
+        "narHash": "sha256-A8krh8yi73R8mSUk63EwM4liaqXk1dws44D4aueNOEw=",
         "owner": "ipetkov",
         "repo": "crane",
-        "rev": "8ab1a49432695bd80ff4b7f6c6515da0e926d922",
+        "rev": "6c25eff4edca8556df21f55c63e49f20efe4be95",
         "type": "github"
       },
       "original": {
         "owner": "ipetkov",
-        "ref": "v0.12.2",
+        "ref": "v0.13.0",
         "repo": "crane",
         "type": "github"
       }
@@ -144,11 +144,11 @@
         "oxalica-rust": "oxalica-rust"
       },
       "locked": {
-        "lastModified": 1693140454,
-        "narHash": "sha256-c+Xqaf4FS71ETt8niKTmQdCvF9KwJVZ19swW5YOKMWk=",
+        "lastModified": 1693143577,
+        "narHash": "sha256-JbiVlhjswkd4XJ13IGv9Fzooudw8qW4NnYD6LE32gkk=",
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "c574e72861066fa1bdfa1430ecc5439b384b0c2d",
+        "rev": "165328330d2130ea41c7aef86f277698db28690b",
         "type": "github"
       },
       "original": {

@@ -39,6 +39,7 @@ let
     tun2socks = oven.tun2socks;
     v2ray-core = oven.v2ray-core;
     wireproxy = oven.wireproxy;
+    wiretap = oven.wiretap;
     xray-core = oven.xray-core;
   };
 
