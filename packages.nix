@@ -21,6 +21,7 @@ let
     gping = oven.gping;
     headscale = oven.headscale;
     hysteria = oven.hysteria;
+    juicity = oven.juicity;
     lyrebird = oven.lyrebird;
     mieru = oven.mieru;
     mtg = oven.mtg;
