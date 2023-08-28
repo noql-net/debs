@@ -45,6 +45,7 @@ gost
 gping
 headscale
 hysteria
+juicity
 lyrebird
 mieru
 mtg
@@ -60,8 +61,10 @@ shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin
 sing-box
 trojan-go
+tuic
 tun2socks
 v2ray-core
 wireproxy
+wiretap
 xray-core
 ```
