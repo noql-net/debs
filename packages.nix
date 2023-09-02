@@ -43,6 +43,7 @@ let
     wireproxy = oven.wireproxy;
     wiretap = oven.wiretap;
     xray-core = oven.xray-core;
+    xray-knife = oven.xray-knife;
   };
 
   debPackages = lib.attrsets.mapAttrs'
