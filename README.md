@@ -38,6 +38,7 @@ cloak
 daze
 dive
 dnscrypt-proxy2
+dtlspipe
 gg
 glider
 go-shadowsocks2

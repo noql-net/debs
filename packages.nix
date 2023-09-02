@@ -14,6 +14,7 @@ let
     daze = oven.daze;
     dive = oven.dive;
     dnscrypt-proxy2 = oven.dnscrypt-proxy2;
+    dtlspipe = oven.dtlspipe;
     gg = oven.gg;
     glider = oven.glider;
     go-shadowsocks2 = oven.go-shadowsocks2;
