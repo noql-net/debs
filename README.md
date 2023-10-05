@@ -30,6 +30,8 @@ issue.
 ## Packages
 ```
 age
+bepass
+bepass-relay
 brook
 chisel
 clash

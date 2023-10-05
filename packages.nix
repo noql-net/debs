@@ -6,6 +6,8 @@ let
 
   staticPackages = {
     age = oven.age;
+    bepass = oven.bepass;
+    bepass-relay = oven.bepass-relay;
     brook = oven.brook;
     chisel = oven.chisel;
     clash = oven.clash;
