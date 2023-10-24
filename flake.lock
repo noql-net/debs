@@ -144,11 +144,11 @@
         "oxalica-rust": "oxalica-rust"
       },
       "locked": {
-        "lastModified": 1697950376,
-        "narHash": "sha256-YeNJDbUztSFmwnCzof/FDz1MXfQ+Qh4ygLBXpv7hGJo=",
+        "lastModified": 1698116822,
+        "narHash": "sha256-vL4fAqEl+ShzFFUom2H461teCauhSzUaxMOV66sYGuo=",
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "9e548b947ab31406f7155ce8b9024b1317a7e725",
+        "rev": "69815347e37ff6bd40e13c7343f171f24f5d70f5",
         "type": "github"
       },
       "original": {
