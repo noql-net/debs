@@ -40,7 +40,7 @@ let
     shadowsocks-xray-plugin = oven.shadowsocks-xray-plugin;
     sing-box = oven.sing-box;
     trojan-go = oven.trojan-go;
-    # tuic = oven.tuic;
+    tuic = oven.tuic;
     tun2socks = oven.tun2socks;
     v2ray-core = oven.v2ray-core;
     wireproxy = oven.wireproxy;

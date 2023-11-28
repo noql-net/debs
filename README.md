@@ -64,6 +64,7 @@ shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin
 sing-box
 trojan-go
+tuic
 tun2socks
 v2ray-core
 wireproxy
