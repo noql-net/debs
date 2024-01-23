@@ -35,7 +35,6 @@ bepass-relay
 brook
 chisel
 clash
-clash-meta
 cloak
 daze
 dive
@@ -51,6 +50,7 @@ hysteria
 juicity
 lyrebird
 mieru
+mihomo
 mtg
 mwgp
 ooniprobe-cli

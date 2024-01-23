@@ -11,7 +11,6 @@ let
     brook = oven.brook;
     chisel = oven.chisel;
     clash = oven.clash;
-    clash-meta = oven.clash-meta;
     cloak = oven.cloak;
     daze = oven.daze;
     dive = oven.dive;
@@ -27,6 +26,7 @@ let
     juicity = oven.juicity;
     lyrebird = oven.lyrebird;
     mieru = oven.mieru;
+    mihomo = oven.mihomo;
     mtg = oven.mtg;
     mwgp = oven.mwgp;
     ooniprobe-cli = oven.ooniprobe-cli;
