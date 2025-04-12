@@ -29,7 +29,6 @@ issue.
 
 ## Packages
 ```
-age
 bepass
 bepass-relay
 brook
@@ -37,14 +36,12 @@ chisel
 clash
 cloak
 daze
-dive
 dnscrypt-proxy2
 dtlspipe
 gg
 glider
 go-shadowsocks2
 gost
-gping
 headscale
 hysteria
 juicity
@@ -55,10 +52,7 @@ mtg
 mwgp
 ooniprobe-cli
 outline-ss-server
-prometheus-alertmanager
-prometheus-blackbox-exporter
 psiphon-tunnel-core
-shadow-tls
 shadowsocks-rust
 shadowsocks-v2ray-plugin
 shadowsocks-xray-plugin

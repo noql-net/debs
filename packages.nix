@@ -5,7 +5,6 @@ let
   stdenv = pkgs.stdenv;
 
   staticPackages = {
-    age = oven.age;
     bepass = oven.bepass;
     bepass-relay = oven.bepass-relay;
     brook = oven.brook;
@@ -13,14 +12,12 @@ let
     clash = oven.clash;
     cloak = oven.cloak;
     daze = oven.daze;
-    dive = oven.dive;
     dnscrypt-proxy2 = oven.dnscrypt-proxy2;
     dtlspipe = oven.dtlspipe;
     gg = oven.gg;
     glider = oven.glider;
     go-shadowsocks2 = oven.go-shadowsocks2;
     gost = oven.gost;
-    gping = oven.gping;
     headscale = oven.headscale;
     hysteria = oven.hysteria;
     juicity = oven.juicity;
@@ -31,10 +28,7 @@ let
     mwgp = oven.mwgp;
     ooniprobe-cli = oven.ooniprobe-cli;
     outline-ss-server = oven.outline-ss-server;
-    prometheus-alertmanager = oven.prometheus-alertmanager;
-    prometheus-blackbox-exporter = oven.prometheus-blackbox-exporter;
     psiphon-tunnel-core = oven.psiphon-tunnel-core;
-    shadow-tls = oven.shadow-tls;
     shadowsocks-rust = oven.shadowsocks-rust;
     shadowsocks-v2ray-plugin = oven.shadowsocks-v2ray-plugin;
     shadowsocks-xray-plugin = oven.shadowsocks-xray-plugin;
