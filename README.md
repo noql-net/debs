@@ -68,7 +68,6 @@ tuic
 tun2socks
 v2ray-core
 wireproxy
-wiretap
 xray-core
 xray-knife
 ```
