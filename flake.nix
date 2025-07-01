@@ -2,7 +2,7 @@
   description = "debs";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
-  inputs.oven.url = "github:noql-net/oven?rev=03563697cea6269371f779be06a884ede979cb3f";
+  inputs.oven.url = "github:noql-net/oven?rev=b58e83d18bbeb0fab747855ee4056b94f52ab25a";
 
   outputs = { self, nixpkgs, oven }: rec {
     devShells.x86_64-linux.default = ((import ./toolbox/shell.nix) { pkgs = nixpkgs.legacyPackages.x86_64-linux; });

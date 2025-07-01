@@ -49,11 +49,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1744932701,
-        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
+        "lastModified": 1751011381,
+        "narHash": "sha256-krGXKxvkBhnrSC/kGBmg5MyupUUT5R6IBCLEzx9jhMM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
+        "rev": "30e2e2857ba47844aa71991daa6ed1fc678bcbb7",
         "type": "github"
       },
       "original": {
@@ -86,17 +86,17 @@
         "oxalica-rust": "oxalica-rust"
       },
       "locked": {
-        "lastModified": 1745243522,
-        "narHash": "sha256-U9hipW2ZelPvRaGmJ1lu6JQ7NOg+zjmZj77+qeMw8EY=",
+        "lastModified": 1751382198,
+        "narHash": "sha256-cN47jRJp8F0dOUbDaL4gJwnsaPSrkuxMci5MMWlU9bo=",
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "03563697cea6269371f779be06a884ede979cb3f",
+        "rev": "b58e83d18bbeb0fab747855ee4056b94f52ab25a",
         "type": "github"
       },
       "original": {
         "owner": "noql-net",
         "repo": "oven",
-        "rev": "03563697cea6269371f779be06a884ede979cb3f",
+        "rev": "b58e83d18bbeb0fab747855ee4056b94f52ab25a",
         "type": "github"
       }
     },
@@ -105,11 +105,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1745029910,
-        "narHash": "sha256-9CtbfTTQWMoOkXejxc5D+K3z/39wkQQt2YfYJW50tnI=",
+        "lastModified": 1751078221,
+        "narHash": "sha256-/SRmXIPxL7ixFLZgcDdgZDuIwt8eWQAamMYer0ODwbM=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "50fefac8cdfd1587ac6d8678f6181e7d348201d2",
+        "rev": "1712a6d3430ca75353d366b7ddd1c79d6b243efc",
         "type": "github"
       },
       "original": {
